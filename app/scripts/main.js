@@ -73,4 +73,14 @@
   }
 
   // Your custom JavaScript goes here
+    function cloneBacon() {
+    var oldBacon = document.querySelector('img');
+    var newBacon = oldBacon.cloneNode();
+    oldBacon.parentNode.appendChild(newBacon);
+  }
+
+  if (location.pathname === '/submodule.html') {
+    var cloneBtn = document.querySelector('button');
+    cloneBtn.addEventListener('click', cloneBacon);
+  }
 })();
